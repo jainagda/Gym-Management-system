@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Registration For trainer</title>
+<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+<div class="register">
+<table cellpadding="5px">
+<h2>Trainer Registration From</h2>
+<form method="POST" id="register" action="trainer.asp" target="_self">
+<tr>
+	<td><b>First name:</td>
+	<td><input type="text" name="fname" required></td>
+	<td><b>Last name:</td>
+	<td><input type="text" name="lname"required></td>
+</tr> 
+<tr>
+	<td><b>Contact:</td>
+	<td><input type="text" name="contact" value=" "required></td>
+	<td><b>Email-Id:</td>
+	<td><input type="text" name="email" placeholder="mymail@mail.com"required></td>
+</tr>
+<tr>
+	<td><b>Gender:</td>
+	<td><input type="text" name="gender" value=""></td> 
+	<td><b>Age:</td>
+	<td><input type="text" name="age" value=" " Required></td>
+</tr>
+<tr>
+   <td><b>Address:</td>
+   <td><input type="text" name="address" row="45" cols="25">
+	      </textarea> </td>
+</tr>
+<tr>
+  <td><b>City:</td>
+  <td><input type="text" name="city" value=""></td>
+  <td><b>Pincode:</td>
+  <td><input type="text" name="pincode" value=" "></td>
+</tr>
+<tr>
+<td><b>Adhara Card No:</td>
+<td><input type="text" name="adhar" placeholder="Eg.1234 5678 9999 "></td>
+</tr>
+<tr>
+<td><b>Qualification:</td>
+<td> <input type="text" name="quali" value="">
+<td><b>work Experience:</td>
+<td><input type="text" name="work" value=""</td>
+<tr>
+<td><b>Bank Name:</td> 
+<td><input type="text" name="bank"></td>
+<td><b>IFSC:</td>
+<td><input type="text" name="ifsc"></td>
+</tr>
+<tr>
+<td><b>Account No:</td>
+<td><input type="text" name="accno"></td>
+<td><b>Account Holder Name:</td>
+<td><input type="text" name="accountname"></td>
+</tr>
+<tr>
+<td><button type="reset" value="reset">Clear</button></td>
+&nbsp&nbsp&nbsp
+<td><button type="submit" value="Submit" onclick="alertmsg()">Submit</button></td>
+</table>
+</form>
+</div>
+<script>
+function alertmsg(){
+alert('successfully submitted');
+}
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Equipments Stock </title>
+<link rel="stylesheet" type="text/css" href="style9.css">
+</head>
+<body>
+<div class="equip">
+<form  method="POST" action="equipment.asp" target="_self">
+<h1>Equipments Stock </h1>
+<table  align="center" border = "1px">
+<tr>
+<th><h3>MACHINES<h3></th>
+<th>QUANTITY</th>
+</tr>
+<center>
+<tr>
+<td align="center"><b>Cardio Machines:</th>
+<td><input type="text" name="cardio" value=" "></td>
+</tr>
+</center>
+<tr>
+<td align="center"><b>Chest Machines:</th>
+<td><input type="text" name="chest" value=" "></td>
+</tr>
+<tr>
+<td align="center"><b>Legs Machines:</th>
+<td><input type="text" name="leg" value=" "></td>
+</tr>
+<tr>
+<td align="center"><b>Dip Station:</th>
+<td><input type="text" name="dip" value=" "></td>
+</tr>
+<tr>
+<td align="center"><b>Dumbbells:</th>
+<td><input type="text" name="dumbbells" value=" "></td>
+</tr>
+<tr>
+<td align="center"><b>Back Machines:</th>
+<td><input type="text" name="back" value=" "></td>
+</tr>
+
+<tr>
+<td align="center"><b>Tricep bars: </th>
+<td><input type="text" name="tricep" value=" "></td>
+</tr>
+<tr>
+<td align="center"><b>Pull-up bars:</th>
+<td><input type="text" name="pull" value=" "></td>
+</tr>
+</table>
+<br>
+<tr>
+<td><button type="reset" value="reset">Reset</button></td>
+<td><button type="Submit" value="submit" onclick="alertmsg()">Submit</button></td>
+</form>
+</div>
+<script>
+function alertmsg(){
+alert('successfully submitted');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<script>
+	function ValidateEmail(inputText)
+	{
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(inputText.value.match(mailformat))
+	{
+	document.form1.mail.focus();
+	return true;
+	}
+	else
+	{
+	alert("You have entered an invalid email address!");
+	document.form1.mail.focus();
+	return false;
+	}
+	}
+</script>
+<meta charset="utf-8">
+<title>Registration</title>
+<link rel="stylesheet" href="reg.css">
+</head>
+
+<body onload='document.form1.text1.focus()'>
+	<div class="conainer">
+		<div class="demo">
+			<h1 class="demo1"><i>Registration Form</i></h1>
+		</div>
+		<div class="demo4">
+		<div class="demo3">
+		<form action="regasp.asp" name="form1" method="POST">
+<table>
+	<tr>
+		<td class="data">Full Name:</td>
+		<td><input type="text" name="name" class="txtbx" required></td>
+	</tr>
+	<tr>
+		<td class="data">Email Id:</td>
+		<td><input type="text" name="mail" class="txtbx" required></td>
+	</tr>
+
+	<tr>
+		<td class="data">Password:</td><td><input type="password" name="psw1" id="myInput" class="txtbx" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></td></tr>
+	<tr>
+		<td class="data" >Show Password</td><td><input type="checkbox" onclick="myFunction()"></td>
+	</tr>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+var myInput = document.getElementById("psw1");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+
+
+	
+	 	<tr>
+		<td class="data">Phone Number</td>
+		<td><input type="number" name="phno" class="txtbx" maxlength="10" required></td>
+		</tr>
+		<tr>
+		<td class="data" rowspan="2">Gender:</td>
+		<td class="data">
+		Male:<input type="radio" name="gend" value="m"></td></tr>			
+		<tr>
+		<td class="data">Female:<input type="radio" name="gend" value="f">
+		</td>
+		</tr>
+		<tr>
+		<td class="data">Address</td>
+		<td><textarea rows="3" name="add" cols="30">
+		</textarea></td>
+		</tr>
+		<tr>
+			<td><input type="submit" value="SignUp" name="btn" class="btn" onclick="ValidateEmail(document.form1.mail)"></td>
+			<td><input type="reset" value="Reset" name="btn1" class="btn">
+			</td>
+		</tr>
+		
+</table>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

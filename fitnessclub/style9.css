@@ -1,0 +1,25 @@
+
+{
+margin:0;
+padding:0;
+}
+
+body{
+background-image: url(equip.jpg);
+background-size:100% 700px;
+background-repeat:no-repeat;
+
+margin:50px 0px 0px 370px;
+}
+.equip{
+border:1px solid black;
+height:500px;
+width:600px;
+text-align:center;
+}
+table{
+height:250px;
+width:400px;
+padding:5px;
+cell-padding:5px;
+}

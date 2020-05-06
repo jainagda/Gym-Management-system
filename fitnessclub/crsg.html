@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Registration Form </title>
+<link rel="stylesheet" type="text/css" href="cstyle.css">
+</head>
+<body>
+<div class="register">
+<table cellpadding="5px">
+<h2>Customer Registration Form</h2>
+<form method="POST" id="register" action="cregasp.asp" target="_self"> 
+<tr>
+	<td><b>First name:</td>
+	<td><input type="text" name="fname" required></td>
+</tr>
+
+<tr>
+	<td><b>Last name:</td>
+	<td><input type="text" name="lname"required></td>
+</tr>
+<tr>
+	<td><b>Contact:</td>
+	<td><input type="text" id="contact" name="Contact" required></td>
+</tr>
+<tr>
+	<td><b>Email-Id:</td>
+	<td><input type="text" name="email" size="25" required>&nbsp&nbsp&nbsp&nbsp&nbsp<span class="note"><b>Format:.+@globex.com</span>
+</td></tr>
+
+<tr>
+	<td><b> Gender:</td>
+	<td><input type="radio" name="gender" value="male"> Male &nbsp&nbsp <input type="radio" name="gender" value="female"> Female &nbsp&nbsp <input type="radio" name="gender" value="other"required> Other</td>
+</tr>
+
+<tr>	
+	<td><b>Current Weight:</td>
+	<td><input type="text" name="cweight" value=" "> </td>
+</tr>
+
+<tr>
+	<td><b>Height:</td>
+	<td><input type="text" name="height" value=" ">&nbsp&nbsp&nbsp&nbsp<span class="note"><b>Format:Enter The Height In Cm </span></td>
+</tr>
+<tr>
+	<td><b>Address:</td>
+	<td><textarea name="address" row="45" cols="25">
+	</textarea></td>
+</tr>
+	
+<tr>
+	<td><b>City:</td>
+	<td> <input type="text" name="city" value=""></td>
+</tr>
+
+<tr>
+<td><button type="submit" value="Submit" onclick="alertmsg()">submit</button></td>
+<td><button type="reset" value="reset">Reset</button></td>
+</tr>
+
+</form> 
+</table>
+</div>
+<script>
+function alertmsg(){
+alert('Successfully Submitted');
+}
+</script>
+</body>
+
+</html>
